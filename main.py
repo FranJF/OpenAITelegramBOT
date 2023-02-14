@@ -1,4 +1,5 @@
 import os
+import asyncio
 import openai
 import telegram
 from dotenv import load_dotenv
@@ -15,8 +16,6 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # respuesta:str = completion.choices[0].text
 # print(respuesta)
 
-
-
 async def main():
     bot = telegram.Bot(TELEGRAM_BOT_KEY_API)
     print(bot)
@@ -26,4 +25,4 @@ async def main():
         await bot.send_message(text='Hi John!', chat_id=chat_id)
         print(chat_id)
 
-main()
+asyncio.run(main())
