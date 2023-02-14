@@ -21,7 +21,7 @@ async def main():
     print(bot)
     async with bot:
         chat_id = (await bot.get_updates())[0].message.from_user.id
-        bot.send_message(text='Hi John!', chat_id=chat_id)
+        await bot.send_message(text='Hi John!', chat_id=chat_id)
         print(chat_id)
 
 asyncio.run(main())
