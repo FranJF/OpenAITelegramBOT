@@ -16,6 +16,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 async def main():
     bot = telegram.Bot(TELEGRAM_BOT_KEY_API)
+    print(bot)
     async with bot:
         update = await bot.get_updates()[0]
         chat_id:int = update.message.from_user.id
