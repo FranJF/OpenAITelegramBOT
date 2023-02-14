@@ -20,9 +20,9 @@ async def main():
     bot = telegram.Bot(TELEGRAM_BOT_KEY_API)
     print(bot)
     async with bot:
-        update = await bot.get_updates()[0]
+        update =  bot.get_updates()[0]
         chat_id:int = update.message.from_user.id
-        await bot.send_message(text='Hi John!', chat_id=chat_id)
+        bot.send_message(text='Hi John!', chat_id=chat_id)
         print(chat_id)
 
 asyncio.run(main())
