@@ -20,3 +20,4 @@ async def main():
         update = await bot.get_updates()[0]
         chat_id:int = update.message.from_user.id
         await bot.send_message(text='Hi John!', chat_id=chat_id)
+        print(chat_id)
