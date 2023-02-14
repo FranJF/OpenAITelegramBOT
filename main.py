@@ -1,8 +1,11 @@
 import os
 import openai
 import telegram
+from dotenv import load_dotenv
 
-TELEGRAM_BOT_KEY_API = "6247474269:AAH4Jh8GNrQw8HWFXScsTIsWnAtJUdtuDKw"  
+load_dotenv()
+
+TELEGRAM_BOT_KEY_API = os.getenv("TELEGRAM_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # pregunta:str = "¿Quien es el presidente de Estados Unidos?"
@@ -22,3 +25,5 @@ async def main():
         chat_id:int = update.message.from_user.id
         await bot.send_message(text='Hi John!', chat_id=chat_id)
         print(chat_id)
+
+main()
