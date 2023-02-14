@@ -2,7 +2,7 @@ import os
 import openai
 import telegram
 
-TELEGRAM_BOT_KEY_API = os.getenv("TELEGRAM_API_KEY")
+TELEGRAM_BOT_KEY_API = "6247474269:AAH4Jh8GNrQw8HWFXScsTIsWnAtJUdtuDKw"  
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # pregunta:str = "¿Quien es el presidente de Estados Unidos?"
